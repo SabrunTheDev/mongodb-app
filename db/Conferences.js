@@ -7,18 +7,24 @@ mongoose
   .then(() => console.log("Connected to MongoDB..."))
   .catch((err) => console.log("Could not connect to MongoDB...", err));
 
-const conferencesScheme = new mongoose.Schema({
-  conference: String,
+const conferencesSchema = new mongoose.Schema({
+  conference: {
+    type: String,
+    unique: true,
+    required: true,
+  },
   location: String,
   description: String,
   division: [String],
 });
 
-const Conferences = mongoose.model("conferences", conferencesScheme);
+module.exports = mongoose.model("conferences", conferencesSchema);
 
-async function getConferences() {
-  const conferences = await Conferences.find();
-  console.log(conferences);
-}
+// const Conferences = mongoose.model("conferences", conferencesSchema);
 
-getConferences();
+// async function getConferences() {
+//   const conferences = await Conferences.find();
+//   console.log(conferences);
+// }
+
+// getConferences();
