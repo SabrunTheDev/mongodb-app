@@ -124,7 +124,3 @@ MONGODB_URI=mongodb+srv://your_username:your_password@cluster.mongodb.net/nba
 ## Contributing
 
 Contributions are welcome! Feel free to open issues, suggest enhancements, or submit pull requests.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
