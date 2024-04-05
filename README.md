@@ -94,6 +94,9 @@ An Express.js server integrated with MongoDB for managing NBA-related data. The 
 - `db/Players.js`: Database model and schema for players.
 - `db/Conferences.js`: Database model and schema for conferences.
 - `db/Teams.js`: Database model and schema for teams.
+- `data/players.js`: Contains sample NBA player data.
+- `data/teams.js`: Contains sample NBA team data.
+- `data/conference.js`: Contains sample NBA conference data.
 - `routes/playersRoutes.js`: Router handling player-related endpoints.
 - `controllers/playersControllers.js`: Controller functions for handling player-related CRUD operations.
 - `routes/conferencesRoutes.js`: Router handling conference-related endpoints.
@@ -106,3 +109,22 @@ An Express.js server integrated with MongoDB for managing NBA-related data. The 
 - `app.js`: Main application file where middleware, routes, and server setup are defined.
 - `package.json`: Project dependencies and scripts configuration.
 - `README.md`: Project documentation providing an overview of the application, setup instructions, and endpoint details.
+
+### Environment Variables
+
+- Create a .env file in the root directory and add the following variables:
+
+```
+PORT=<ANY PORT HERE>
+MONGODB_URI=mongodb+srv://your_username:your_password@cluster.mongodb.net/nba
+```
+
+- Retrieve data from the `/data` folder for your own MongoDB database.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues, suggest enhancements, or submit pull requests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
