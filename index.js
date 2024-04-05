@@ -27,11 +27,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ extended: true }));
 app.use(logger);
 
+// Simple View Render for the default page
+app.set("view engine", "ejs");
+app.get("/", (req, res) => {
+  res.render("index", { text: "CRUD API" });
+});
+
 const conferencesRouter = require("./routes/conferencesRoutes");
 app.use("/conferences", conferencesRouter);
 
 const playersRouter = require("./routes/playersRoutes");
 app.use("/players", playersRouter);
+
+const teamRouters = require("./routes/teamsRoutes");
+app.use("/teams", teamRouters);
 
 // Logger function
 function logger(req, res, next) {
