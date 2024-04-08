@@ -103,7 +103,7 @@ An Express.js server integrated with MongoDB for managing NBA-related data. The 
 - `controllers/conferencesController.js`: Controller functions for handling conference-related operations.
 - `routes/teamsRoutes.js`: Router handling team-related endpoints.
 - `controllers/teamsControllers.js`: Controller functions for handling team-related operations.
-- `public/style.css`: CSS file for styling the application.
+- `css/style.css`: CSS file for styling the application.
 - `public/script.js`: JavaScript file containing client-side scripts.
 - `views/index.ejs`: EJS template file for rendering the main HTML view.
 - `app.js`: Main application file where middleware, routes, and server setup are defined.
